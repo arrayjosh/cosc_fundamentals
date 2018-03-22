@@ -137,18 +137,85 @@ function printTheNumbers() {
 
 function factorial(n) {
   let result = 1;
-  for(let i = 1; i <= n; i++) {
+  for(let i = n; i > 0; i--) {
     result = result * i;
   }
   return result;
 }
 
-function display(msg) {
-  console.log(msg);
+function recursiveFactorial(n) {
+  if(n <= 1) {
+    return 1;
+  } else {
+    return n * recursiveFactorial(n - 1);
+  }
 }
 
-display("Hey.... this is cool!");
+console.log("factorial of 3 is " + recursiveFactorial(3));
+console.log("factorial of 4 is " + recursiveFactorial(4));
+console.log("factorial of 5 is " + recursiveFactorial(5));
+console.log("factorial of 68 is " + recursiveFactorial(68));
 
-console.log("factorial of 3 is " + factorial(3));
-console.log("factorial of 4 is " + factorial(4));
-console.log("factorial of 68 is " + factorial(68));
+
+
+function countdown(start) {
+  for(let i = start; i >= 0; i--) {
+    console.log(i);
+  }
+}
+
+// countdown(1000000);
+/* PRINT OUT:
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+*/
+
+
+
+
+
+// function countup(end) {
+//   recCountup(end, 0);
+// }
+
+function recCountup(end, i) {
+  if(i > end) return; //BASE CASE
+  console.log(i);
+  recCountup(end, i + 1);
+}
+
+recCountup(10, 0);
+
+/* PRINT OUT:
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+*/
+
+
+function sumOddInts(n) {
+  let sum = 0;
+  for(let i = 0; i < n; i++) {
+    sum += (2 * i) + 1;
+  }
+  return sum;
+}
+
+console.log(sumOddInts(10));
