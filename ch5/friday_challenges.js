@@ -162,7 +162,9 @@ returns string
 */
 
 function seeColor(str) {
-  // YOUR CODE HERE
+  if(str.indexOf('red') === 0) return 'red';
+  else if(str.indexOf('blue') === 0) return 'blue';
+  else return '';
 }
 
 header('seeColor');
@@ -188,7 +190,9 @@ returns string
 */
 
 function atFirst(str) {
-  // YOUR CODE HERE
+  let result = str.slice(0, 2);
+  while(result.length < 2) result += '@';
+  return result;
 }
 
 header('atFirst');
@@ -209,7 +213,7 @@ returns boolean
 */
 
 function endsLy(str) {
-  // YOUR CODE HERE
+  return str[str.length - 2] === 'l' && str[str.length - 1] === 'y';
 }
 
 header('endsLy');

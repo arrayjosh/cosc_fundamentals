@@ -22,7 +22,7 @@ returns string
 */
 
 function nTwice(str, n) {
-  // YOUR CODE HERE
+  return "";
 }
 
 header('nTwice');
